@@ -1,11 +1,11 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyCrY8TBwVKsvDTf839Ke0zNdZ9uAMlVWH8",
-  authDomain: "tic-tac-toe-5fabd.firebaseapp.com",
-  databaseURL: "https://tic-tac-toe-5fabd-default-rtdb.firebaseio.com",
-  projectId: "tic-tac-toe-5fabd",
-  storageBucket: "tic-tac-toe-5fabd.appspot.com",
-  messagingSenderId: "994149236222",
-  appId: "1:994149236222:web:76c4c6acbebf9fb23c54af"
+  apiKey: "AIzaSyC1JfK2ut3f6jHsC9QU6zDQexF2k5LgOPE",
+  authDomain: "mycity-glgo.firebaseapp.com",
+  databaseURL: "https://mycity-glgo-default-rtdb.firebaseio.com",
+  projectId: "mycity-glgo",
+  storageBucket: "mycity-glgo.appspot.com",
+  messagingSenderId: "208983517146",
+  appId: "1:208983517146:web:c0877b50f4556a803682e3"
 };
 
 // Initialize Firebase
@@ -36,3 +36,13 @@ document.getElementById("output").innerHTML+=row;
       //End code
       });});}
 getData();
+function logout() {
+  localStorage.removeItem("user_name");
+  localStorage.removeItem("room_name");
+  window.location="index.html";
+
+}
+function redirecttoroomname(name){
+  localStorage.setItem("room_name", name);
+  window.location="kwitter_page.html";
+}
